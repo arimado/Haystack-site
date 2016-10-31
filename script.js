@@ -1,7 +1,7 @@
 const concatenateValuesOf = ( obj ) => {
   let result = ''
   for (let key in obj) {
-    result += `${obj[key].reduce((p, c) => { return p += c + " " })}`
+    result += `${obj[key].reduce((p, c) => { return p += " " + c + " " })}`
   }
   console.log(result)
   return result
