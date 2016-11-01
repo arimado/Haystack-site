@@ -19,9 +19,27 @@ const createCard = ( cardData ) => {
   card.className = concatenateValuesOf(cardData)
 }
 
-const renderCard = ( cardElement ) => {
+const renderElement = ( elementData ) => {
+  return () => {
+
+  }
+}
+
+const renderWith = () => {
+  return ()
 }
 
 
+const renderWith()
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+const el_root = document.getElementById('root');
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(generateCard)
 const cardElements = cards.map(createCard)
+
+window.setInterval(() => {
+
+}, 1000)
