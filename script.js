@@ -9,7 +9,6 @@ const concatenateValuesOf = ( obj ) => {
   for (let key in obj) {
     result += `${obj[key].reduce((p, c) => { return p += " " + c + " " })}`
   }
-  console.log(result)
   return result
 }
 
@@ -25,7 +24,13 @@ const createCard = ( cardData ) => {
   card.className = concatenateValuesOf(cardData)
 }
 
-const renderCard = ( cardElement ) => {
+const renderElement = ( elementData ) => {
+  return () => {
+
+  }
+}
+
+const renderWith = () => {
 }
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(generateCard)
