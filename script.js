@@ -1,3 +1,9 @@
+const state = {
+
+};
+
+// -----------------------------------------------------------------------------
+
 const concatenateValuesOf = ( obj ) => {
   let result = ''
   for (let key in obj) {
@@ -22,6 +28,39 @@ const createCard = ( cardData ) => {
 const renderCard = ( cardElement ) => {
 }
 
-
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(generateCard)
 const cardElements = cards.map(createCard)
+
+// -----------------------------------------------------------------------------
+
+
+// d_ : dom elements
+// s_ : side effects
+
+const s_resetCards = (cardElements) => {
+  cardElements.forEach((card) => {
+    card.classList.remove('slide-in');
+  })
+}
+
+const animationDoneCB = ( element, index, elements ) => {
+  return ( e ) => {
+    if ( elements.length - 1 === index ) s_resetCards(elements);
+  }
+}
+
+const d_cards = document.querySelectorAll('.card')
+
+d_cards.forEach((card, idx) => {
+  const cardNo = idx + 1;
+  setTimeout(function () {
+    card.classList.add('slide-in')
+    card.addEventListener("webkitAnimationEnd", animationDoneCB(card, idx, d_cards),false);
+    card.addEventListener("animationend", animationDoneCB(card, idx, d_cards),false);
+    card.addEventListener("oanimationend", animationDoneCB(card, idx, d_cards),false);
+  }, cardNo * 500);
+});
+
+// add slide toggle in
+// no repeat
+// when all done
