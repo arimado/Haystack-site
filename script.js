@@ -26,7 +26,6 @@ const createCard = ( cardData ) => {
 
 const renderElement = ( elementData ) => {
   return () => {
-
   }
 }
 
@@ -44,7 +43,8 @@ const cardElements = cards.map(createCard)
 
 const s_resetCards = (cardElements) => {
   cardElements.forEach((card) => {
-    card.classList.remove('slide-in');
+    card.classList.remove('slide-in-left');
+    card.classList.remove('slide-in-right');
   })
 }
 
@@ -59,11 +59,15 @@ const d_cards = document.querySelectorAll('.card')
 d_cards.forEach((card, idx) => {
   const cardNo = idx + 1;
   setTimeout(function () {
-    card.classList.add('slide-in')
+    if ( idx % 2 === 0 ) {
+      card.classList.add('slide-in-right')
+    } else {
+      card.classList.add('slide-in-left')
+    }
     card.addEventListener("webkitAnimationEnd", animationDoneCB(card, idx, d_cards),false);
     card.addEventListener("animationend", animationDoneCB(card, idx, d_cards),false);
     card.addEventListener("oanimationend", animationDoneCB(card, idx, d_cards),false);
-  }, cardNo * 500);
+  }, cardNo * 5000);
 });
 
 // add slide toggle in
