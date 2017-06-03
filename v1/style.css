@@ -1,0 +1,435 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');*/
+
+.u {
+	border-bottom: 3px solid white;
+	font-style: italic;
+}
+
+body {
+	background: #322053;
+	color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#root {
+	height: 100vh;
+	position: relative;
+}
+
+#product {
+	display: flex;
+
+}
+
+main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+summary {
+	margin: 20px;
+	position: relative;
+	z-index: 200;
+}
+
+.tagline {
+	margin: 20px;
+	font-size: 1.4em;
+	font-weight: 100;
+	line-height: 1.3em;
+}
+
+.details {
+	font-size: 1em;
+	margin-top: 40px;
+	font-weight: 100;
+}
+
+.down-chevron {
+	margin-top: 30px;
+font-size: 3em;
+}
+
+.vignette {
+  position: relative;
+}
+
+.vignette:after {
+ -moz-box-shadow: inset 0 0 10em #000;
+ -webkit-box-shadow: inset 0 0 10em #000;
+ box-shadow: inset 0 0 10em #000;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 2;
+ content: "";
+ opacity: 0.3;
+}
+
+#logo {
+	font-size: 5em;
+}
+
+.cards {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	background: blueviolet;
+	z-index: -100;
+	overflow: hidden;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+	position: absolute;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+.card:nth-child(1) {
+  background: blueviolet;
+	z-index: -1;
+}
+
+.card:nth-child(2) {
+  background: gold;
+	z-index: -2;
+}
+
+.card:nth-child(3) {
+  background: limegreen;
+	z-index: -3;
+}
+
+.card:nth-child(4) {
+  background: midnightblue;
+	z-index: -4;
+}
+
+.card:nth-child(5) {
+  background: mediumseagreen;
+	z-index: -5;
+}
+
+.card:nth-child(6) {
+  background: sandybrown;
+	z-index: -6;
+}
+
+.card:nth-child(7) {
+  background: violet;
+	z-index: -7;
+}
+
+.card:nth-child(8) {
+  background: tomato;
+	z-index: -8;
+}
+
+.card:nth-child(9) {
+  background: rebeccapurple;
+	z-index: -9
+}
+
+.card:nth-child(10) {
+  background: mediumseagreen;
+	z-index: -10
+}
+
+.slide-in {
+  animation-duration: 1000ms;
+  animation-name: slide-in;
+  animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.right-move {
+	margin-left: 0%;
+}
+
+.left-move {
+	margin-right: 0%;
+}
+
+.slide-in-right {
+	animation-duration: 500ms;
+  animation-name: slide-in-right;
+  animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.slide-in-left {
+	animation-duration: 500ms;
+  animation-name: slide-in-left;
+  animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+		transform: translate(0px, 0px) rotate(0deg);
+  }
+  to {
+		transform: translate(1000px, -1000px) rotate(20deg);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+		transform: translate(0px, 0px) rotate(0deg);
+  }
+  to {
+		transform: translate(-1000px, -1000px) rotate(-20deg);
+  }
+}
+
+
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+main {
+	font-size: 12px;
+}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+
+/*
+	*  * * * * * * *  PRODUCT
+*/
+
+.container {
+  width: 800px;
+  margin-top: 5%;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 4em;
+  margin-top: 30%;
+}
+
+.subtitle {
+  font-size: 1.4em;
+  font-weight: 200;
+}
+
+
+#call-to-action {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 0px 100px 0px;
+	background-color: #1f162f;
+}
+
+.cta-text {
+	font-size: 1.5em;
+	font-weight: 100;
+	line-height: 1.3em;
+}
+
+.sign-up-form {
+	width: 500px;
+}
+
+#mc_embed_signup{
+  clear:left;
+  margin-top: 30px;
+}
+/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+#mc_embed_signup form {
+  padding: 0 !important;
+  padding-bottom: 0 !important;
+}
+#mc_embed_signup .mc-field-group {
+  width: 100% !important;
+  padding-bottom: 0 !important;
+}
+#mc_embed_signup input {
+  line-height: 1.5 !important;
+  font-size: 1.4em !important;
+  padding: 5px 10px !important;
+  color: #fff !important;
+  display: block !important;
+  width: 100% !important;
+  background: transparent !important;
+  border: 3px solid #fff !important;
+  text-align: center !important;
+  border-radius: 5px 5px 0 0  !important;
+}
+
+#mc_embed_signup input.button {
+   box-sizing: border-box !important;
+   border: none !important;
+   font-family: inherit !important;
+   font-size: inherit !important;
+   color: inherit !important;
+   background: none !important;
+   cursor: pointer !important;
+   padding: 10px 0px !important;
+   letter-spacing: 1px !important;
+   font-weight: 400 !important;
+   outline: none !important;
+   position: relative !important;
+   height: auto !important;
+   background: white !important;
+   color: #322053 !important;
+   box-shadow: 0 6px #ccc !important;
+   -webkit-transition: none !important;
+   -moz-transition: none !important;
+   transition: none !important;
+   border-radius: 0 0 5px 5px !important;
+ }
+ #mc_embed_signup input.button:placeholder {
+   color: white !important;
+ }
+ #mc_embed_signup input.button:hover {
+   box-shadow: 0 4px #ccc !important;
+   top: 2px !important;
+ }
+
+/**/
+
+
+.row-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-inner-content {
+  margin-top: 30%;
+  font-size: 1.5em;
+	line-height: 1.5em;
+}
