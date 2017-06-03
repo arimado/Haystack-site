@@ -73,7 +73,7 @@ body {
 
 #product {
 	display: flex;
-
+	padding: 25px;
 }
 
 main {
@@ -250,9 +250,6 @@ font-size: 3em;
 }
 
 
-/*
- * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
- */
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
@@ -298,6 +295,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
 /* Styles */
+
 }
 
 /* Desktops and laptops ----------- */
@@ -324,6 +322,13 @@ only screen and (min-device-pixel-ratio : 1.5) {
 	*  * * * * * * *  PRODUCT
 */
 
+h1 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 2em;
+	line-height: 1.2em;
+}
+
 .container {
   width: 800px;
   margin-top: 5%;
@@ -348,7 +353,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 100px 0px 100px 0px;
+	padding: 100px 25px 100px 25px;
 	background-color: #1f162f;
 }
 
@@ -356,10 +361,11 @@ only screen and (min-device-pixel-ratio : 1.5) {
 	font-size: 1.5em;
 	font-weight: 100;
 	line-height: 1.3em;
+	text-align: center;
 }
 
 .sign-up-form {
-	width: 500px;
+	max-width: 500px;
 }
 
 #mc_embed_signup{
@@ -433,3 +439,16 @@ only screen and (min-device-pixel-ratio : 1.5) {
   font-size: 1.5em;
 	line-height: 1.5em;
 }
+
+
+
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+ @media only screen and (max-width : 768px) {
+	 .row-inner-content {
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	 }
+ }

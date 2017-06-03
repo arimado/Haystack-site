@@ -78,6 +78,7 @@ s_animateCards();
 
 var indexContainer = document.getElementById('index-animation');
 var matchContainer = document.getElementById('match-animation');
+var resultContainer = document.getElementById('result-animation');
 
 var index = bodymovin.loadAnimation({
   wrapper: indexContainer,
@@ -91,4 +92,11 @@ var match = bodymovin.loadAnimation({
   animType: 'svg',
   loop: true,
   animationData: match_data
+});
+
+var result = bodymovin.loadAnimation({
+  wrapper: resultContainer,
+  animType: 'svg',
+  loop: true,
+  animationData: result_data
 });
